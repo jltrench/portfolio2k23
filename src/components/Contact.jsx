@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import React, { useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Section = styled.div`
   height: 100vh;
-  
+
   @media only screen and (max-width: 768px) {
     padding: 10px;
-  }  
+  }
 `;
 
 const Container = styled.div`
@@ -55,11 +55,11 @@ const Button = styled.button`
   padding: 20px;
 
   &:active {
-    transform: scale(.98);
+    transform: scale(0.98);
   }
 `;
 
-const Contact = () => {
+const Contact = forwardRef(() => {
   const ref = useRef();
   const [sucess, setSucess] = useState(null);
 
@@ -89,24 +89,17 @@ const Contact = () => {
   return (
     <Section>
       <Container>
-          <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contato</Title>
-            <Input placeholder="Seu nome" name="name"></Input>
-            <Input placeholder="Seu melhor email" name="email"></Input>
-            <TextArea
-              name="message"
-              placeholder="Mensagem"
-              rows={10}
-            ></TextArea>
-            <Button type="submit">
-              Enviar
-            </Button>
-            {sucess &&
-              "✉️ Sua mensagem foi enviada. Entrarei em contato logo =D"}
-          </Form>
+        <Form ref={ref} onSubmit={handleSubmit}>
+          <Title>Contato</Title>
+          <Input placeholder="Seu nome" name="name"></Input>
+          <Input placeholder="Seu melhor email" name="email"></Input>
+          <TextArea name="message" placeholder="Mensagem" rows={10}></TextArea>
+          <Button type="submit">Enviar</Button>
+          {sucess && "✉️ Sua mensagem foi enviada. Entrarei em contato logo =D"}
+        </Form>
       </Container>
     </Section>
   );
-};
+});
 
 export default Contact;

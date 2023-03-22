@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import React from "react";
-import WebDesign from './PcContainer'
+import React, { useRef } from "react";
+import PcContainer from "./PcContainer";
 
 const Section = styled.div`
   height: 100vh;
@@ -9,7 +9,7 @@ const Section = styled.div`
 
   @media only screen and (max-width: 768px) {
     scroll-snap-align: unset;
-  }  
+  }
 `;
 
 const Container = styled.div`
@@ -20,7 +20,7 @@ const Container = styled.div`
 
   @media only screen and (max-width: 768px) {
     scroll-snap-align: unset;
-  }  
+  }
 `;
 
 const Left = styled.div`
@@ -38,7 +38,6 @@ const Title = styled.h1`
     font-size: 58px;
   }
 `;
-
 
 const Right = styled.div`
   flex: 1;
@@ -98,38 +97,39 @@ const Button = styled.button`
   cursor: pointer;
 
   &:active {
-    transform: scale(.95);
-  }
-
-  &:hover {
-    color: goldenrod;
-    transform: rotate(1deg);
+    transform: scale(0.95);
   }
 `;
 
-const Who = () => {
+const Bio = () => {
   return (
     <Section>
       <Container>
         <Left>
-          <WebDesign/>
+          <PcContainer />
         </Left>
         <Right>
           <Title>Bio</Title>
-          <Image src="./img/arroznobg.png"/>
+          <Image src="./img/arroznobg.png" />
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>2020</Subtitle>
           </WhatWeDo>
           <Desc>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa quaerat quae doloremque, assumenda cupiditate minus consectetur facere ullam, sint sequi quidem ab corrupti est animi doloribus aliquid reprehenderit. Consectetur, quibusdam!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+            quaerat quae doloremque, assumenda cupiditate minus consectetur
+            facere ullam, sint sequi quidem ab corrupti est animi doloribus
+            aliquid reprehenderit. Consectetur, quibusdam!
           </Desc>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>2023</Subtitle>
           </WhatWeDo>
           <Desc>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa quaerat quae doloremque, assumenda cupiditate minus consectetur facere ullam, sint sequi quidem ab corrupti est animi doloribus aliquid reprehenderit. Consectetur, quibusdam!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+            quaerat quae doloremque, assumenda cupiditate minus consectetur
+            facere ullam, sint sequi quidem ab corrupti est animi doloribus
+            aliquid reprehenderit. Consectetur, quibusdam!
           </Desc>
           <Button>Meu portfolio &gt;</Button>
         </Right>
@@ -138,4 +138,4 @@ const Who = () => {
   );
 };
 
-export default Who;
+export default Bio;

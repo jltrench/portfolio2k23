@@ -175,7 +175,7 @@ const Right = styled.div`
   flex: 1;
 `;
 
-const Work = () => {
+const Stacks = () => {
   const [work, setWork] = useState("");
 
   return (
@@ -208,4 +208,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Stacks;

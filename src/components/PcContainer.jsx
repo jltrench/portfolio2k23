@@ -4,12 +4,13 @@ import React from 'react'
 import Pc from './Pc'
 
 const PcContainer = () => {
+
   return (
     <Canvas>
-      <Stage environment="apartment" intensity={1}>
+      <Stage environment="apartment" intensity={.35}>
         <Pc/>
       </Stage>
-      <OrbitControls enableZoom={false} autoRotate/>
+      <OrbitControls autoRotate={true} autoRotateSpeed={.5} enablePan={false} enableZoom={false}  makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2}/>
     </Canvas>
   )
 }
