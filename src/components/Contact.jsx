@@ -1,27 +1,18 @@
 import styled from "styled-components";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Map from "./Map";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
   
   @media only screen and (max-width: 768px) {
-    scroll-snap-align: unset;
+    padding: 10px;
   }  
 `;
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  gap: 50px;
-`;
-
-const Left = styled.div`
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,6 +27,7 @@ const Form = styled.form`
 
 const Title = styled.h1`
   font-weight: 200;
+  text-align: center;
 `;
 
 const Input = styled.input`
@@ -65,10 +57,6 @@ const Button = styled.button`
   &:active {
     transform: scale(.98);
   }
-`;
-
-const Right = styled.div`
-  flex: 1;
 `;
 
 const Contact = () => {
@@ -101,7 +89,6 @@ const Contact = () => {
   return (
     <Section>
       <Container>
-        <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contato</Title>
             <Input placeholder="Seu nome" name="name"></Input>
@@ -117,10 +104,6 @@ const Contact = () => {
             {sucess &&
               "✉️ Sua mensagem foi enviada. Entrarei em contato logo =D"}
           </Form>
-        </Left>
-        <Right>
-          <Map />
-        </Right>
       </Container>
     </Section>
   );

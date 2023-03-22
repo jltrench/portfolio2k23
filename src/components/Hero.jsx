@@ -6,7 +6,6 @@ import { Canvas } from "@react-three/fiber";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,8 +19,7 @@ const Section = styled.div`
 
 const Container = styled.div`
   height: 100%;
-  scroll-snap-align: center;
-  width: 1400px;
+  width: 95vw;
   display: flex;
   justify-content: space-between;
 

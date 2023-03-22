@@ -3,10 +3,10 @@ import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import Pc from './Pc'
 
-const WebDesign = () => {
+const PcContainer = () => {
   return (
     <Canvas>
-      <Stage environment="city" intensity={0.6}>
+      <Stage environment="apartment" intensity={1}>
         <Pc/>
       </Stage>
       <OrbitControls enableZoom={false} autoRotate/>
@@ -14,4 +14,4 @@ const WebDesign = () => {
   )
 }
 
-export default WebDesign
+export default PcContainer;

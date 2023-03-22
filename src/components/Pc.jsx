@@ -8,13 +8,13 @@ Title: Cortland 256k Personal Computer System
 */
 
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { PerspectiveCamera, useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/pc-transformed.glb')
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 5]} scale={0.25}>
+      <group rotation={[-Math.PI / 2, 0, 4]} scale={.25}>
         <mesh geometry={nodes.Object_2.geometry} material={materials['Material.001']} />
         <mesh geometry={nodes.Object_3.geometry} material={materials['Material.001']} />
         <mesh geometry={nodes.Object_4.geometry} material={materials['Material.001']} />

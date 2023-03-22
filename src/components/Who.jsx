@@ -4,7 +4,6 @@ import WebDesign from './PcContainer'
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
   display: flex;
   justify-content: center;
 
@@ -15,8 +14,7 @@ const Section = styled.div`
 
 const Container = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
-  width: 1400px;
+  width: 95vw;
   display: flex;
   justify-content: space-between;
 
@@ -58,9 +56,9 @@ const Right = styled.div`
 
 const Image = styled.img`
   position: absolute;
-  height: 130px;
-  width: 130px;
-  top: 6rem;
+  height: 100px;
+  width: 100px;
+  top: 1.6rem;
   left: 7.5rem;
 
   @media only screen and (max-width: 768px) {

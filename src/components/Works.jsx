@@ -12,17 +12,16 @@ const data = [
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
   display: flex;
   justify-content: center;
 
   @media only screen and (max-width: 768px) {
-    scroll-snap-align: unset;
+    height: 100%;
   }  
 `;
 
 const Container = styled.div`
-  width: 1400px;
+  width: 95vw;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -48,14 +47,20 @@ const Left = styled.div`
 const ClickHere = styled.p`
   font-size: 20px;
   position: absolute;
-  top: 8.5rem;
+  top: 6.6rem;
   left: 20rem;
   display: block;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     top: 5rem;
     left: 11rem;
     font-size: 11px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    top: 9rem;
+    left: 18rem;
+    font-size: 13px;
   }
 
   &:hover {
@@ -65,7 +70,7 @@ const ClickHere = styled.p`
 
 const Arrow = styled.img`
   position: absolute;
-  top: 9.5rem;
+  top: 7.6rem;
   left: 17.5rem;
   height: 30px;
   width: 30px;
@@ -79,17 +84,22 @@ const Arrow = styled.img`
     animation: updownMobile 2s infinite ease-out;
   }
 
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin-top: 5rem;
+    left: 22rem;
+  }
+
   @keyframes updown {
     0% {
-      top: 9.3rem;
+      top: 7.5rem;
       opacity: 0.3;
     }
     50% {
-      top: 9rem;
+      top: 7.2rem;
       opacity: 0.6;
     }
     100% {
-      top: 9.5rem;
+      top: 7.6rem;
     }
   }
 
@@ -113,6 +123,10 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin-top: 2.9rem;
+  }
 `;
 
 const ListItem = styled.li`
@@ -127,6 +141,10 @@ const ListItem = styled.li`
     font-size: 32px;
     color: #4b2d06;
     -webkit-text-stroke: 0px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 50px;
   }
 
   ::after {
